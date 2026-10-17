@@ -1,0 +1,73 @@
+============================================================
+ PANDUAN SISWA — KasirQu (Pertemuan 9)
+ Belajar PHP Dasar: dari nol sampai bisa
+============================================================
+
+APA INI?
+Folder "kasirqu" adalah aplikasi latihan PHP pertama kalian.
+KasirQu adalah nama aplikasi; Toko Maju Jaya adalah nama toko contohnya.
+Di dalamnya ada 8 latihan yang dikerjakan berurutan.
+
+------------------------------------------------------------
+CARA MENJALANKAN (sekali saja di awal)
+------------------------------------------------------------
+1. Pastikan web server sudah terpasang (XAMPP atau Laragon).
+2. Nyalakan Apache.
+   - XAMPP : buka XAMPP Control Panel, klik "Start" pada Apache.
+   - Laragon: buka Laragon, klik "Start All".
+   (MySQL belum perlu hari ini.)
+3. Buat folder "kasirqu" di dalam folder web server:
+   - Laragon: D:\laragon\www\   -> hasil: D:\laragon\www\smk4\kasirqu\
+   - XAMPP  : C:\xampp\htdocs\   -> hasil: C:\xampp\htdocs\smk4\kasirqu\
+4. Buka browser (Chrome/Edge), ketik di alamat:
+       http://localhost/kasirqu/
+5. Muncul halaman menu. Klik Latihan 1, lalu lanjut 2, 3, dst.
+
+CATATAN: PHP tidak dijalankan dengan cara dobel-klik file.
+File PHP HARUS dibuka lewat alamat http://localhost/... di atas.
+
+------------------------------------------------------------
+ATURAN MAIN
+------------------------------------------------------------
+- Kerjakan latihan urut dari 1 sampai 8.
+- Setiap latihan punya kotak "// TUGAS". Wajib dicoba semua.
+- Kalau tampilan tidak berubah, tekan Ctrl + F5 (muat ulang).
+- Jangan takut error. Error adalah teman belajar. ^_^
+
+------------------------------------------------------------
+KALAU MUNCUL ERROR, CEK 3 HAL INI
+------------------------------------------------------------
+1. Tanda titik koma (;) di akhir perintah:
+       echo "Halo"    -> SALAH (kurang ;)
+       echo "Halo";   -> BENAR
+
+2. Tanda dollar ($) di depan nama variabel:
+       nama = "Rani"    -> SALAH
+       $nama = "Rani";  -> BENAR
+
+3. Tanda kutip (") yang lupa ditutup:
+       echo "Halo;      -> SALAH
+       echo "Halo";     -> BENAR
+
+Bobot error biasanya disebutkan nomor barisnya, contoh:
+"Parse error ... on line 12" -> cek baris 12.
+
+------------------------------------------------------------
+FILE LATIHAN
+------------------------------------------------------------
+index.php             -> halaman menu (pintu masuk)
+01_halo.php           -> echo / menampilkan teks
+02_variabel.php       -> variabel ($nama, $umur, ...)
+03_tipe_data.php      -> string, integer, float, boolean, array
+04_operator.php       -> hitung-hitungan & gabung teks
+05_percabangan.php    -> if / else / switch (mengambil keputusan)
+06_perulangan.php     -> for / while / foreach (mengulang)
+07_mesin_kasir.php    -> MOMEN WOW: kasir otomatis (gabungan semua)
+08_latihan_bebas.php  -> buat programmu sendiri
+
+------------------------------------------------------------
+SETELAH SELESAI
+------------------------------------------------------------
+Coba ubah judul di index.php menjadi namamu sendiri, lalu
+tunjukkan hasilnya ke pelatih. Selamat berkarya!
+============================================================

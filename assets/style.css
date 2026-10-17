@@ -1,0 +1,184 @@
+/* ============================================================
+   kasirqu/assets/style.css
+   Tampilan bersama untuk semua halaman latihan.
+   Dibuat sekali, dipakai oleh index.php dan 01-08.
+   ============================================================ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #F4F6FA;
+  color: #262B33;
+  line-height: 1.6;
+}
+
+a { color: #E87D0E; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---- Bilah atas ---- */
+.topbar {
+  background: #1F3864;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.topbar-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand { font-weight: 700; letter-spacing: .5px; font-size: 18px; }
+.brand small { color: #E87D0E; font-weight: 600; }
+.topbar a.back { color: #fff; font-size: 14px; opacity: .9; }
+
+/* ---- Wadah utama ---- */
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+}
+
+.tag {
+  display: inline-block;
+  background: #E87D0E;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 20px;
+  letter-spacing: .5px;
+  margin-bottom: 10px;
+}
+
+h1 { color: #1F3864; font-size: 30px; margin-bottom: 8px; }
+h2 { color: #1F3864; font-size: 20px; margin: 18px 0 8px; }
+h3 { color: #1F3864; font-size: 16px; margin: 14px 0 6px; }
+
+.lead { color: #5A6370; margin-bottom: 16px; }
+
+/* ---- Kartu ---- */
+.card {
+  background: #fff;
+  border: 1px solid #E1E6EE;
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin: 16px 0;
+  box-shadow: 0 2px 10px rgba(31,56,100,.06);
+}
+
+/* ---- Kotak kode ---- */
+pre, code {
+  font-family: Consolas, "Courier New", monospace;
+}
+pre {
+  background: #141E30;
+  color: #E8EFF7;
+  padding: 14px 16px;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+code {
+  background: #EEF2F9;
+  color: #B35300;
+  padding: 1px 6px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* ---- Kotak tugas ---- */
+.task {
+  background: #FFF6EA;
+  border-left: 5px solid #E87D0E;
+  border-radius: 0 10px 10px 0;
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+.task h3 { color: #B35300; margin-top: 0; }
+.task ol, .task ul { padding-left: 22px; }
+.task li { margin-bottom: 6px; }
+
+/* ---- Tabel ---- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+th {
+  background: #1F3864;
+  color: #fff;
+  text-align: left;
+  padding: 10px 14px;
+  font-size: 14px;
+}
+td {
+  padding: 9px 14px;
+  border-bottom: 1px solid #E1E6EE;
+  font-size: 14px;
+}
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: #F8FAFD; }
+
+/* ---- Navigasi kartu di index ---- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+.nav-card {
+  display: block;
+  background: #fff;
+  border: 1px solid #E1E6EE;
+  border-radius: 12px;
+  padding: 18px;
+  color: #262B33;
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.nav-card:hover {
+  transform: translateY(-3px);
+  border-color: #E87D0E;
+  box-shadow: 0 8px 20px rgba(31,56,100,.12);
+  text-decoration: none;
+}
+.nav-num {
+  display: inline-block;
+  background: #1F3864;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 8px;
+  padding: 2px 10px;
+  margin-bottom: 10px;
+}
+.nav-card h3 { margin: 0 0 6px; font-size: 17px; }
+.nav-card p { color: #5A6370; font-size: 13.5px; margin: 0; }
+
+/* ---- Footer ---- */
+.foot {
+  text-align: center;
+  color: #8A93A0;
+  font-size: 12.5px;
+  padding: 24px 20px 36px;
+}
+
+/* ---- Badge kecil ---- */
+.pill {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 20px;
+  background: #E8F0FB;
+  color: #1F3864;
+}
+.pill.ok { background: #E4F7EC; color: #1B8A4C; }
+.pill.no { background: #FDE7E5; color: #C0392B; }
