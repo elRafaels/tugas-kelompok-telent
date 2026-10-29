@@ -5,9 +5,7 @@
 // Buka   : http://localhost/smk4/kasirqu/01_halo.php
 //
 // INGAT: file PHP boleh berisi HTML biasa. Bagian yang diawali
-// <?php ... ?> adalah "otak" yang dijalankan server.
-// ============================================================
-?>
+// <?php ... ?>
 <!DOCTYPE html>
 <html lang="id">
 <head>

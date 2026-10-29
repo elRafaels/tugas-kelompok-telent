@@ -8,19 +8,21 @@
 
 body {
   font-family: "Segoe UI", Tahoma, sans-serif;
-  background: #F4F6FA;
-  color: #262B33;
+  background: #030712;
+  color: #e2e8f0;
   line-height: 1.6;
 }
 
-a { color: #E87D0E; text-decoration: none; }
+a { color: #00f0ff; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* ---- Bilah atas ---- */
 .topbar {
-  background: #1F3864;
+  background: #081028
   color: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  border-bottom: 1px solid #00d2ff;
+  box-shadow: 0 0 15px rgba(0,210,255, 0.3);
 }
 .topbar-inner {
   max-width: 900px;
@@ -43,7 +45,7 @@ a:hover { text-decoration: underline; }
 
 .tag {
   display: inline-block;
-  background: #E87D0E;
+  background: rgba(0, 240, 255, 0.15); border: 1px solid #00f0ff; color: #00f0ff;
   color: #fff;
   font-size: 12px;
   font-weight: 700;
@@ -53,20 +55,20 @@ a:hover { text-decoration: underline; }
   margin-bottom: 10px;
 }
 
-h1 { color: #1F3864; font-size: 30px; margin-bottom: 8px; }
-h2 { color: #1F3864; font-size: 20px; margin: 18px 0 8px; }
-h3 { color: #1F3864; font-size: 16px; margin: 14px 0 6px; }
+h1 { color: #ffffff; text-shadow: 0 0 10px rgba(0, 210, 255, 0.4);}
+h2 { color: #38bdf8;; font-size: 20px; margin: 18px 0 8px; }
+h3 { color: #7dd3fc;; font-size: 16px; margin: 14px 0 6px; }
 
 .lead { color: #5A6370; margin-bottom: 16px; }
 
 /* ---- Kartu ---- */
 .card {
-  background: #fff;
-  border: 1px solid #E1E6EE;
+  background: rgba(8, 20, 44, 0.85);;
+  border: 1px solid #0284c7;
   border-radius: 12px;
   padding: 20px 22px;
   margin: 16px 0;
-  box-shadow: 0 2px 10px rgba(31,56,100,.06);
+  box-shadow: 0 0 12px rgba(2, 132, 199, 0.25); color: #e2e8f0;;
 }
 
 /* ---- Kotak kode ---- */
@@ -84,36 +86,51 @@ pre {
   margin: 12px 0;
 }
 code {
-  background: #EEF2F9;
-  color: #B35300;
-  padding: 1px 6px;
+  background: rgba(8, 20, 44, 0.9);
+  color: #00f0ff;
+  border: 1px solid #0284c7;
+  padding: 2px 6px;
   border-radius: 5px;
   font-size: 14px;
 }
 
 /* ---- Kotak tugas ---- */
 .task {
-  background: #FFF6EA;
-  border-left: 5px solid #E87D0E;
+  background: rgba(15, 23, 42, 0.9);      
+  border-left: 4px solid #f97316;          
+  border-top: 1px solid rgba(249, 115, 22, 0.3);
+  border-right: 1px solid rgba(249, 115, 22, 0.3);
+  border-bottom: 1px solid rgba(249, 115, 22, 0.3);
   border-radius: 0 10px 10px 0;
   padding: 16px 20px;
   margin: 20px 0;
+  box-shadow: 0 0 15px rgba(249, 115, 22, 0.15); 
 }
-.task h3 { color: #B35300; margin-top: 0; }
-.task ol, .task ul { padding-left: 22px; }
-.task li { margin-bottom: 6px; }
-
+.task h3 { 
+  color: #ff8c00;                       
+  font-weight: 700;
+  margin-top: 0; 
+  text-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
+}
+.task ol, .task ul { 
+  padding-left: 22px; 
+}
+.task li { 
+  color: #e2e8f0;                     
+  margin-bottom: 8px; 
+}
 /* ---- Tabel ---- */
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 14px 0;
-  background: #fff;
+  background: #081028; 
+  border: 1px solid #0284c7;
   border-radius: 10px;
   overflow: hidden;
 }
 th {
-  background: #1F3864;
+  background:  #0f172a; color: #00f0ff;
   color: #fff;
   text-align: left;
   padding: 10px 14px;
@@ -121,11 +138,13 @@ th {
 }
 td {
   padding: 9px 14px;
-  border-bottom: 1px solid #E1E6EE;
+  border-bottom: 1px solid #1e293b; color: #cbd5e1;
   font-size: 14px;
 }
 tr:last-child td { border-bottom: none; }
-tr:nth-child(even) td { background: #F8FAFD; }
+tr:nth-child(even) td { 
+  background: rgba(0, 240, 255, 0.05); 
+}
 
 /* ---- Navigasi kartu di index ---- */
 .grid {
@@ -136,22 +155,22 @@ tr:nth-child(even) td { background: #F8FAFD; }
 }
 .nav-card {
   display: block;
-  background: #fff;
-  border: 1px solid #E1E6EE;
+  background: rgba(8, 20, 44, 0.85);;
+  border: 1px solid #0284c7;
   border-radius: 12px;
   padding: 18px;
-  color: #262B33;
+  color: #e2e8f0;
   transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
 }
 .nav-card:hover {
   transform: translateY(-3px);
-  border-color: #E87D0E;
-  box-shadow: 0 8px 20px rgba(31,56,100,.12);
+  border-color: #00f0ff;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
   text-decoration: none;
 }
 .nav-num {
   display: inline-block;
-  background: #1F3864;
+  background: rgba(0, 240, 255, 0.15); border: 1px solid #00f0ff; color: #00f0ff;
   color: #fff;
   font-weight: 700;
   font-size: 13px;
@@ -165,11 +184,11 @@ tr:nth-child(even) td { background: #F8FAFD; }
 /* ---- Footer ---- */
 .foot {
   text-align: center;
-  color: #8A93A0;
+  color: #64748b;                         
   font-size: 12.5px;
   padding: 24px 20px 36px;
+  border-top: 1px solid rgba(2, 132, 199, 0.2);
 }
-
 /* ---- Badge kecil ---- */
 .pill {
   display: inline-block;
@@ -177,8 +196,178 @@ tr:nth-child(even) td { background: #F8FAFD; }
   font-weight: 600;
   padding: 2px 10px;
   border-radius: 20px;
-  background: #E8F0FB;
-  color: #1F3864;
+  background: rgba(0, 240, 255, 0.15);
+  color: #00f0ff;
+  border: 1px solid #00f0ff;
 }
 .pill.ok { background: #E4F7EC; color: #1B8A4C; }
 .pill.no { background: #FDE7E5; color: #C0392B; }
+
+/* ============================================================
+   HIASAN SAMPING KANAN & KIRI (CYBER HUD BORDERS)
+   ============================================================ */
+
+/* Pengaturan dasar untuk bingkai kiri dan kanan */
+html::before, html::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 4px; /* Ketebalan garis energi */
+  height: 100vh;
+  pointer-events: none; /* Supaya tidak mengganggu klik */
+  z-index: 998;
+}
+
+/* 1. Sinar Energi Cyan di Kiri Bergerak ke Bawah */
+html::before {
+  left: 0;
+  border-right: 1px solid rgba(0, 240, 255, 0.4);
+  background: linear-gradient(
+    to bottom, 
+    transparent 0%, 
+    #00f0ff 40%, 
+    #ffffff 50%, 
+    #00f0ff 60%, 
+    transparent 100%
+  );
+  background-size: 100% 200%;
+  box-shadow: 2px 0 15px rgba(0, 240, 255, 0.6);
+  animation: energyFlowDown 3s linear infinite;
+}
+
+/* 2. Sinar Energi Oranye di Kanan Bergerak ke Atas (Kontras) */
+html::after {
+  right: 0;
+  border-left: 1px solid rgba(255, 140, 0, 0.4);
+  background: linear-gradient(
+    to top, 
+    transparent 0%, 
+    #ff8c00 40%, 
+    #ffffff 50%, 
+    #ff8c00 60%, 
+    transparent 100%
+  );
+  background-size: 100% 200%;
+  box-shadow: -2px 0 15px rgba(255, 140, 0, 0.6);
+  animation: energyFlowUp 4s linear infinite;
+}
+
+/* Keyframes untuk menggerakkan sinar */
+@keyframes energyFlowDown {
+  0% { background-position: 0 -200%; }
+  100% { background-position: 0 200%; }
+}
+
+@keyframes energyFlowUp {
+  0% { background-position: 0 200%; }
+  100% { background-position: 0 -200%; }
+}
+
+/* ============================================================
+   HIASAN ATAS & BAWAH (CYBER HUD BORDERS HORIZONTAL)
+   ============================================================ */
+
+/* 3. Sinar Energi Cyan di Atas Bergerak ke Kanan */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 4px; /* Ketebalan garis atas */
+  border-bottom: 1px solid rgba(0, 240, 255, 0.4);
+  background: linear-gradient(
+    to right, 
+    transparent 0%, 
+    #00f0ff 40%, 
+    #ffffff 50%, 
+    #00f0ff 60%, 
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  box-shadow: 0 2px 15px rgba(0, 240, 255, 0.6);
+  pointer-events: none;
+  z-index: 1000; /* Paling atas biar nutupin header */
+  animation: energyFlowRight 3.5s linear infinite;
+}
+
+/* 4. Sinar Energi Oranye di Bawah Bergerak ke Kiri */
+.wrap::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 4px; /* Ketebalan garis bawah */
+  border-top: 1px solid rgba(255, 140, 0, 0.4);
+  background: linear-gradient(
+    to left, 
+    transparent 0%, 
+    #ff8c00 40%, 
+    #ffffff 50%, 
+    #ff8c00 60%, 
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  box-shadow: 0 -2px 15px rgba(255, 140, 0, 0.6);
+  pointer-events: none;
+  z-index: 1000;
+  animation: energyFlowLeft 4.5s linear infinite;
+}
+
+/* Keyframes untuk menggerakkan sinar horizontal */
+@keyframes energyFlowRight {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes energyFlowLeft {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ============================================================
+   DEKORASI HUD MELAYANG DI RUANG KOSONG KIRI & KANAN
+   ============================================================ */
+
+/* 1. Teks Data Sistem Vertikal di Area Kosong KIRI */
+.topbar::before {
+  content: "SYS.ONLINE // DATA_LINK: OMEGA // PHP_MODULE: ACTIVE";
+  position: absolute;
+  top: 150px; /* Jarak dari atas layar */
+  left: 3vw;  /* Jarak dari pinggir kiri layar */
+  color: rgba(0, 240, 255, 0.25); /* Warna Cyan transparan/samar */
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 13px;
+  letter-spacing: 4px;
+  
+  /* Bikin teks berdiri menyamping dari atas ke bawah */
+  writing-mode: vertical-rl; 
+  transform: rotate(180deg); 
+  
+  text-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
+  pointer-events: none; /* Biar tidak ganggu kalau terklik */
+  z-index: 995;
+}
+
+/* 2. Indikator Koordinat & Barcode di Area Kosong KANAN */
+.topbar::after {
+  content: "STATUS: SECURE \A MEM: 64TB \A CPU: 99% \A \A |||| | || || | |";
+  white-space: pre; /* Biar kode \A berfungsi sebagai Enter (baris baru) */
+  position: absolute;
+  top: 150px; 
+  right: 3vw; /* Jarak dari pinggir kanan layar */
+  color: rgba(255, 140, 0, 0.25); /* Warna Oranye transparan/samar */
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  
+  /* Bikin teks berdiri menyamping */
+  writing-mode: vertical-rl;
+  
+  text-shadow: 0 0 8px rgba(255, 140, 0, 0.5);
+  pointer-events: none;
+  z-index: 995;
+}
