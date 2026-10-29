@@ -36,9 +36,15 @@
       <?php
         // echo = perintah untuk "mengeluarkan" teks ke halaman.
         // Perhatikan titik dua (;) di akhir setiap perintah. Jangan lupa!
-        echo "<h2>Halo, Dunia!</h2>";
+        echo "<h2>Halo, Kami dari smk 4!</h2>";
         echo "<p>Namaku <strong>PHP</strong>, bahasa yang membuat web jadi hidup.</p>";
         echo "<p>Hari ini: " . date("d M Y") . "</p>";
+        echo "cita cita kami jadi programer";
+        echo "<br>";
+        $angka1 = 10;
+        $angka2 = 5;
+        $hasil = $angka1 * $angka2;
+        echo "hasil dar 10 x 5 adalah ".$hasil;
       ?>
     </div>
 

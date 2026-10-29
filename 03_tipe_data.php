@@ -1,20 +1,15 @@
 <?php
-// ============================================================
-// Latihan 3 — Tipe Data
-// Tujuan : mengenal jenis-jenis isi kotak (variabel).
-// Buka   : http://localhost/smk4/kasirqu/03_tipe_data.php
-//
-// PHP otomatis tahu tipe data dari isinya. Tapi penting untuk
-// paham bedanya, karena memengaruhi perhitungan & penulisan.
-// ============================================================
+$teks      = "Toko Maju Jaya";
+$jumlah    = 20;
+$harga     = 3500.50;
+$stok_ada  = true;
+$produk    = ["Indomie", "Teh Pucuk", "Kopi", 1];
+$produk1   = array("Indomie", "Teh Pucuk", "Kopi", 1);
 
-$teks      = "Toko Maju Jaya";   // string  : kumpulan huruf/teks
-$jumlah    = 20;                 // integer : bilangan bulat
-$harga     = 3500.50;            // float   : bilangan desimal
-$stok_ada  = true;               // boolean : benar / salah saja (true / false)
-$produk    = ["Indomie", "Teh Pucuk", "Kopi",1]; // array: daftar banyak nilai
-$produk1=array("Indomie","Teh Pucuk","Kopi",1);
-$array_to =["produk"=>$produk,"harga"=>$harga,"jumlah"=>$jumlah];
+$produk[]  = "Susu Kotak";
+
+$array_to  = ["produk" => $produk, "harga" => $harga, "jumlah" => $jumlah];
+
 var_dump($teks);
 var_dump($jumlah);
 var_dump($harga);
@@ -43,16 +38,16 @@ var_dump($produk1);
     <p class="tag">Latihan 3</p>
     <h1>Tipe Data: Jenis Isi Kotak</h1>
     <p class="lead">Setiap nilai punya "jenis". PHP bisa menebak jenisnya otomatis.</p>
-    <?=var_dump($array_to); // menampilkan isi array secara lengkap?>
+    <?=var_dump($array_to);?>
     <br>
-    <?=var_dump($array_to["produk"][0]); // menampilkan isi array secara lengkap?>
+    <?=var_dump($array_to["produk"][0]);?>
     <table>
       <tr><th>Tipe</th><th>Contoh nilai</th><th>Isi variabel</th></tr>
       <tr><td>string</td><td>"Toko Maju Jaya"</td><td><?php echo $teks; ?></td></tr>
       <tr><td>integer</td><td>20</td><td><?php echo $jumlah; ?></td></tr>
       <tr><td>float</td><td>3500.50</td><td><?php echo $harga; ?></td></tr>
       <tr><td>boolean</td><td>true / false</td><td><?php echo $stok_ada ? "true (stok ada)" : "false (stok habis)"; ?></td></tr>
-      <tr><td>array</td><td>["Indomie", "Teh Pucuk", "Kopi"]</td><td><?php echo implode(", ", $produk); ?></td></tr>
+      <tr><td>array</td><td>["Indomie", "Teh Pucuk", "Kopi", "Susu Kotak"]</td><td><?php echo implode(", ", $produk); ?></td></tr>
     </table>
 
     <div class="card">
@@ -64,6 +59,14 @@ var_dump($produk1);
         var_dump($teks);
         var_dump($jumlah);
         var_dump($stok_ada);
+      ?></pre>
+    </div>
+
+    <div class="card">
+      <h2>Cek Tipe Data "16" vs 16</h2>
+      <pre><?php
+        var_dump("16");
+        var_dump(16);
       ?></pre>
     </div>
 

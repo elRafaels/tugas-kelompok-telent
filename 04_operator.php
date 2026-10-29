@@ -1,24 +1,22 @@
 <?php
-// ============================================================
-// Latihan 4 — Operator
-// Tujuan : berhitung dan menggabung teks di PHP.
-// Buka   : http://localhost/smk4/kasirqu/04_operator.php
-//
-// Operator = lambang untuk melakukan sesuatu terhadap nilai.
-// ============================================================
-
-// --- Operator hitung (aritmatika) ---
 $a = 7;
 $b = 2;
 
-// --- Contoh kasus: warung ---
 $nama_barang = "Indomie Goreng";
 $harga_satu  = 3500;
-$jumlah_beli = 3;
+$jumlah_beli = 5;
+$total_1     = $harga_satu * $jumlah_beli;
 
-$total       = $harga_satu * $jumlah_beli;   // perkalian
-$uang_dibawa = 15000;
-$kembalian   = $uang_dibawa - $total;        // pengurangan
+$nama_barang2  = "Teh Pucuk";
+$harga_satu2   = 3000;
+$jumlah_beli2  = 2;
+$total_2       = $harga_satu2 * $jumlah_beli2;
+
+$total         = $total_1 + $total_2;
+$uang_dibawa   = 25000;
+$kembalian     = $uang_dibawa - $total;
+
+$is_genap      = ($total % 2 == 0);
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -63,10 +61,10 @@ $kembalian   = $uang_dibawa - $total;        // pengurangan
     <div class="card">
       <h2>Kasus nyata: belanja di warung</h2>
       <table>
-        <tr><th>Barang</th><td><?php echo $nama_barang; ?></td></tr>
-        <tr><th>Harga satuan</th><td>Rp<?php echo $harga_satu; ?></td></tr>
-        <tr><th>Jumlah beli</th><td><?php echo $jumlah_beli; ?></td></tr>
+        <tr><th>Barang 1</th><td><?php echo $nama_barang . " (Rp" . $harga_satu . " x " . $jumlah_beli . ")"; ?></td></tr>
+        <tr><th>Barang 2</th><td><?php echo $nama_barang2 . " (Rp" . $harga_satu2 . " x " . $jumlah_beli2 . ")"; ?></td></tr>
         <tr><th>Total bayar</th><td>Rp<?php echo $total; ?></td></tr>
+        <tr><th>Cek Genap (% 2)</th><td><?php echo $total . ($total % 2) . " (" . ($is_genap ? "Bilangan Genap" : "Bilangan Ganjil") . ")"; ?></td></tr>
         <tr><th>Uang dibawa</th><td>Rp<?php echo $uang_dibawa; ?></td></tr>
         <tr><th>Kembalian</th><td>Rp<?php echo $kembalian; ?></td></tr>
       </table>
