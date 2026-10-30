@@ -204,7 +204,7 @@ tr:nth-child(even) td {
 .pill.no { background: #FDE7E5; color: #C0392B; }
 
 /* ============================================================
-   HIASAN SAMPING KANAN & KIRI (CYBER HUD BORDERS)
+   hiasan vertikal di kiri dan kanan
    ============================================================ */
 
 /* Pengaturan dasar untuk bingkai kiri dan kanan */
@@ -214,11 +214,11 @@ html::before, html::after {
   top: 0;
   width: 4px; /* Ketebalan garis energi */
   height: 100vh;
-  pointer-events: none; /* Supaya tidak mengganggu klik */
+  pointer-events: none; 
   z-index: 998;
 }
 
-/* 1. Sinar Energi Cyan di Kiri Bergerak ke Bawah */
+/* 1. Sinar energi di kiri bergerak ke bawah */
 html::before {
   left: 0;
   border-right: 1px solid rgba(0, 240, 255, 0.4);
@@ -235,7 +235,7 @@ html::before {
   animation: energyFlowDown 3s linear infinite;
 }
 
-/* 2. Sinar Energi Oranye di Kanan Bergerak ke Atas (Kontras) */
+/* 2. Sinar energi oranye di kanan bergerak ke atas */
 html::after {
   right: 0;
   border-left: 1px solid rgba(255, 140, 0, 0.4);
@@ -264,7 +264,7 @@ html::after {
 }
 
 /* ============================================================
-   HIASAN ATAS & BAWAH (CYBER HUD BORDERS HORIZONTAL)
+   hiasan horizontal di atas dan bawah 
    ============================================================ */
 
 /* 3. Sinar Energi Cyan di Atas Bergerak ke Kanan */
@@ -327,47 +327,162 @@ body::after {
 }
 
 /* ============================================================
-   DEKORASI HUD MELAYANG DI RUANG KOSONG KIRI & KANAN
+   dekor teks vertikal di kiri dan kanan
    ============================================================ */
 
-/* 1. Teks Data Sistem Vertikal di Area Kosong KIRI */
+/* 1. teks vertikal di kiri */
 .topbar::before {
   content: "SYS.ONLINE // DATA_LINK: OMEGA // PHP_MODULE: ACTIVE";
   position: absolute;
-  top: 150px; /* Jarak dari atas layar */
-  left: 3vw;  /* Jarak dari pinggir kiri layar */
-  color: rgba(0, 240, 255, 0.25); /* Warna Cyan transparan/samar */
+  top: 150px; 
+  left: 3vw;  
+  color: rgba(0, 240, 255, 0.25); 
   font-family: Consolas, "Courier New", monospace;
   font-size: 13px;
   letter-spacing: 4px;
   
-  /* Bikin teks berdiri menyamping dari atas ke bawah */
   writing-mode: vertical-rl; 
   transform: rotate(180deg); 
   
   text-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
-  pointer-events: none; /* Biar tidak ganggu kalau terklik */
+  pointer-events: none; 
   z-index: 995;
 }
 
-/* 2. Indikator Koordinat & Barcode di Area Kosong KANAN */
+/* indikator koordinat & barcode */
 .topbar::after {
   content: "STATUS: SECURE \A MEM: 64TB \A CPU: 99% \A \A |||| | || || | |";
-  white-space: pre; /* Biar kode \A berfungsi sebagai Enter (baris baru) */
+  white-space: pre; 
   position: absolute;
   top: 150px; 
-  right: 3vw; /* Jarak dari pinggir kanan layar */
-  color: rgba(255, 140, 0, 0.25); /* Warna Oranye transparan/samar */
+  right: 3vw; /* jarak dari pinggir kanan layar */
+  color: rgba(255, 140, 0, 0.25); 
   font-family: Consolas, "Courier New", monospace;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 2px;
   line-height: 1.5;
   
-  /* Bikin teks berdiri menyamping */
   writing-mode: vertical-rl;
   
   text-shadow: 0 0 8px rgba(255, 140, 0, 0.5);
   pointer-events: none;
   z-index: 995;
+}
+
+/* --- TOMBOL PROFIL DI HEADER --- */
+.btn-profil {
+  display: inline-block;
+  padding: 6px 16px;
+  border: 1px solid #00d2ff;
+  border-radius: 20px;
+  color: #00d2ff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  background: rgba(0, 210, 255, 0.05); 
+}
+
+.btn-profil:hover {
+  background: #00d2ff;
+  color: #0d1117; 
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.6); /* efek cahaya menyala */
+  transform: translateY(-2px);
+}
+
+/* --- TATA LETAK KARTU PROFIL --- */
+.profile-grid .card {
+  padding: 20px; 
+  text-align: left; 
+}
+
+/* Flexbox  */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-img {
+  width: 75px; 
+  height: 75px;
+  border-radius: 50%;
+  border: 3px solid #00d2ff;
+  object-fit: cover;
+  flex-shrink: 0; 
+  margin-bottom: 0; 
+}
+
+.nama {
+  font-size: 1.2rem;
+  color: white;
+  margin: 0 0 4px 0;
+}
+
+.kelas {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.peran {
+  color: #00d2ff;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  white-space: normal; 
+}
+
+/* --- ANIMASI AUDIO WAVEFORM --- */
+.audio-waveform {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 25px; 
+  margin-left: auto;
+  margin-top: 60px; 
+}
+
+.audio-waveform .bar {
+  width: 4px;
+  border-radius: 2px;
+  background-color: #00d2ff;
+  box-shadow: 0 0 8px rgba(0, 210, 255, 0.8);
+  animation: wave 1.2s ease-in-out infinite;
+}
+
+/* Jeda gerak */
+.audio-waveform .bar:nth-child(1) { animation-delay: 0.1s; }
+.audio-waveform .bar:nth-child(2) { animation-delay: 0.3s; }
+.audio-waveform .bar:nth-child(3) { animation-delay: 0.0s; }
+.audio-waveform .bar:nth-child(4) { animation-delay: 0.4s; }
+.audio-waveform .bar:nth-child(5) { animation-delay: 0.2s; }
+.audio-waveform .bar:nth-child(6) { animation-delay: 0.1s; }
+.audio-waveform .bar:nth-child(7) { animation-delay: 0.3s; }
+.audio-waveform .bar:nth-child(8) { animation-delay: 0.0s; }
+.audio-waveform .bar:nth-child(9) { animation-delay: 0.4s; }
+.audio-waveform .bar:nth-child(10) { animation-delay: 0.2s; }
+.audio-waveform .bar:nth-child(11) { animation-delay: 0.1s; }
+.audio-waveform .bar:nth-child(12) { animation-delay: 0.3s; }
+.audio-waveform .bar:nth-child(13) { animation-delay: 0.0s; }
+.audio-waveform .bar:nth-child(14) { animation-delay: 0.4s; }
+.audio-waveform .bar:nth-child(15) { animation-delay: 0.2s; }
+.audio-waveform .bar:nth-child(16) { animation-delay: 0.1s; } 
+.audio-waveform .bar:nth-child(17) { animation-delay: 0.0s; }
+.audio-waveform .bar:nth-child(18) { animation-delay: 0.4s; }
+.audio-waveform .bar:nth-child(19) { animation-delay: 0.2s; }
+.audio-waveform .bar:nth-child(20) { animation-delay: 0.1s; } 
+.audio-waveform .bar:nth-child(21) { animation-delay: 0.3s; } 
+@keyframes wave {
+  0%, 100% { height: 10px; }
+  50% { height: 45px; }
 }

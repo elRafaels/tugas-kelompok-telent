@@ -1,5 +1,5 @@
 <?php
-$teks      = "Toko Maju Jaya";
+$teks      = "Toko Kopdes Jaya";
 $jumlah    = 20;
 $harga     = 3500.50;
 $stok_ada  = true;
@@ -9,14 +9,6 @@ $produk1   = array("Indomie", "Teh Pucuk", "Kopi", 1);
 $produk[]  = "Susu Kotak";
 
 $array_to  = ["produk" => $produk, "harga" => $harga, "jumlah" => $jumlah];
-
-var_dump($teks);
-var_dump($jumlah);
-var_dump($harga);
-var_dump($stok_ada);
-var_dump($produk);
-var_dump($array_to);
-var_dump($produk1);
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -38,9 +30,11 @@ var_dump($produk1);
     <p class="tag">Latihan 3</p>
     <h1>Tipe Data: Jenis Isi Kotak</h1>
     <p class="lead">Setiap nilai punya "jenis". PHP bisa menebak jenisnya otomatis.</p>
-    <?=var_dump($array_to);?>
+    
+    <?php //var_dump($array_to); ?>
     <br>
-    <?=var_dump($array_to["produk"][0]);?>
+    <?php //var_dump($array_to["produk"][0]); ?>
+    
     <table>
       <tr><th>Tipe</th><th>Contoh nilai</th><th>Isi variabel</th></tr>
       <tr><td>string</td><td>"Toko Maju Jaya"</td><td><?php echo $teks; ?></td></tr>

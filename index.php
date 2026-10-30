@@ -33,20 +33,24 @@ $jumlah = count($latihan); // count() = menghitung banyaknya isi array.
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KasirQu — Aplikasi Latihan PHP</title>
+  <title>Xúnyǎn sānchóngzòu</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <span class="brand">KasirQu <small>/ Toko Maju Jaya</small></span>
-      <span style="font-size:13px;opacity:.85;">Pertemuan 9</span>
+ <header class="topbar">
+  <div class="topbar-inner" style="display: flex; justify-content: space-between; align-items: center;">
+    <span class="brand">WowoQu <small>/ Toko Kopdes Jaya</small></span>
+    <!-- Wrapper untuk teks kanan dan tombol profil -->
+    <div class="topbar-right" style="display: flex; align-items: center; gap: 15px;">
+      <span class="back">Pertemuan 9</span>
+      <a href="profil.php" class="btn-profil">Profil Tim</a>
     </div>
-  </header>
+  </div>
+ </header>
 
   <main class="wrap">
-    <p class="tag">Aplikasi Latihan</p>
-    <h1>Selamat Datang di KasirQu</h1>
+    <p class="tag">Latihan Kopdes</p>
+    <h1>Selamat Datang Di WowoQu</h1>
     <p class="lead">
       Ini halaman depan aplikasi latihan. Ada <strong><?php echo $jumlah; ?></strong> latihan
       yang bisa kamu buka satu per satu. Mulai dari Latihan 1 sampai selesai, ya!
